@@ -2,7 +2,7 @@
 let users = [
     { id: 1, name: "João Silva", avatar: "img/perfil2.jpeg", isFriend: true, status: "online" },
     { id: 2, name: "Maria Oliveira", avatar: "img/perfil3.jpeg", isFriend: true, status: "online" },
-    { id: 3, name: "Carlos Souza", avatar: "img/Perfil4.jpeg", isFriend: false, status: "offline" },
+    { id: 3, name: "Carlos Souza", avatar: "img/perfil4.jpeg", isFriend: false, status: "offline" },
 ];
 
 let conversations = [
@@ -17,7 +17,7 @@ let conversations = [
     }
 ];
 
-let currentUser = { id: 0, name: "Você", avatar: "img/avatars/user.jpg", status: "online" };
+let currentUser = { id: 0, name: "Você", avatar: "img/perfil.jpg", status: "online" };
 let currentConversationId = null;
 
 // Funções principais
@@ -33,7 +33,7 @@ function renderConversations() {
         const convoElement = document.createElement('div');
         convoElement.className = 'conversation-item';
         convoElement.innerHTML = `
-            <img src="${participants[0]?.avatar || 'img/perfil.jpg'}" 
+            <img src="${participants[0]?.avatar || 'img/perfil2.jpeg'}" 
                  alt="${participants[0]?.name || 'Grupo'}">
             <div>
                 <h4>${participants.map(p => p.name).join(', ')}</h4>
@@ -77,7 +77,7 @@ function loadConversation(conversationId) {
         .map(id => users.find(u => u.id === id))
         .filter(u => u.id !== currentUser.id);
 
-    document.getElementById('currentChatAvatar').src = participants[0]?.avatar || 'img/avatars/default.jpg';
+    document.getElementById('currentChatAvatar').src = participants[0]?.avatar || 'img/perfil2.jpeg;';
     document.getElementById('currentChatName').textContent = participants.map(p => p.name).join(', ');
     document.getElementById('currentChatStatus').textContent = participants[0]?.status || '';
 }

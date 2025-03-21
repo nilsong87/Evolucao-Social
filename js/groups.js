@@ -46,13 +46,15 @@ let groups = [
     }
 ];
 
-// Usuário atual (simulação)
-let currentUser = "user1";
-
 // Função para renderizar grupos
 function renderGroups() {
-    const groupList = document.querySelector('.group-list');
-    groupList.innerHTML = '<h2>Grupos Existentes</h2>'; // Limpa o conteúdo anterior
+    const groupList = document.getElementById('groupItems');
+    if (!groupList) {
+        console.error("Elemento 'groupItems' não encontrado no HTML.");
+        return;
+    }
+
+    groupList.innerHTML = ''; // Limpa o conteúdo anterior
 
     groups.forEach(group => {
         const groupCard = document.createElement('div');
@@ -60,8 +62,11 @@ function renderGroups() {
         groupCard.innerHTML = `
             <h3>${group.name}</h3>
             <p>${group.description}</p>
+            <div class="group-cover">
+                <img src="${group.cover}" alt="Capa do Grupo">
+            </div>
             <div class="group-actions">
-                ${group.members.includes(currentUser) ?
+                ${group.members.includes(currentUser.id) ?
                     `<button class="leave" onclick="leaveGroup(${group.id})">Sair</button>` :
                     `<button onclick="joinGroup(${group.id})">Entrar</button>`
                 }
@@ -87,10 +92,10 @@ document.getElementById('createGroupButton').addEventListener('click', function 
             id: groups.length + 1,
             name: groupName,
             description: groupDescription,
-            cover: groupCover ? URL.createObjectURL(groupCover) : null,
+            cover: groupCover ? URL.createObjectURL(groupCover) : "https://via.placeholder.com/600x200",
             privacy: groupPrivacy,
-            creator: currentUser,
-            members: [currentUser],
+            creator: currentUser.id,
+            members: [currentUser.id],
             posts: [],
             requests: []
         };
@@ -99,28 +104,38 @@ document.getElementById('createGroupButton').addEventListener('click', function 
         document.getElementById('groupName').value = '';
         document.getElementById('groupDescription').value = '';
         document.getElementById('groupCover').value = '';
+    } else {
+        alert('Por favor, preencha o nome e a descrição do grupo.');
     }
 });
 
 // Função para entrar em um grupo
 function joinGroup(groupId) {
     const group = groups.find(g => g.id === groupId);
-    if (!group.members.includes(currentUser)) {
+    if (!group.members.includes(currentUser.id)) {
         if (group.privacy === "public") {
-            group.members.push(currentUser);
+            group.members.push(currentUser.id);
+            alert(`Você entrou no grupo: ${group.name}`);
         } else {
-            group.requests.push(currentUser);
+            group.requests.push(currentUser.id);
             alert("Solicitação de entrada enviada. Aguarde aprovação.");
         }
         renderGroups();
+    } else {
+        alert("Você já faz parte deste grupo.");
     }
 }
 
 // Função para sair de um grupo
 function leaveGroup(groupId) {
     const group = groups.find(g => g.id === groupId);
-    group.members = group.members.filter(member => member !== currentUser);
-    renderGroups();
+    if (group.members.includes(currentUser.id)) {
+        group.members = group.members.filter(member => member !== currentUser.id);
+        alert(`Você saiu do grupo: ${group.name}`);
+        renderGroups();
+    } else {
+        alert("Você não faz parte deste grupo.");
+    }
 }
 
 // Renderizar grupos ao carregar a página

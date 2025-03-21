@@ -1,5 +1,5 @@
 // Simulação de banco de dados de usuários
-const users = [];
+let users = [];
 
 // Função de login
 document.getElementById('loginForm').addEventListener('submit', function (e) {

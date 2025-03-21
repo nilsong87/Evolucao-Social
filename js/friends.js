@@ -12,9 +12,6 @@ let friends = [
     { id: 1, name: "João Silva", avatar: "img/perfil2.jpeg" },
 ];
 
-// Usuário atual (simulação)
-let currentUser = { id: 6, name: "Nilson Gomes", avatar: "img/perfil.jpg" };
-
 // Função para renderizar todos os usuários
 function renderUsers() {
     const friendsGrid = document.querySelector('.friends-grid');

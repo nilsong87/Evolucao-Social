@@ -6,8 +6,6 @@ let users = [
     { id: 4, name: "Ana Costa", avatar: "img/avatars/ana.jpg" },
 ];
 
-let currentUser = { id: 0, name: "Nilson Gomes", avatar: "img/avatars/nilson.jpg" };
-
 let posts = [
     {
         id: 1,
@@ -39,7 +37,7 @@ let posts = [
     },
     {
         id: 5,
-        userId: 0,
+        userId: currentUser.id,
         content: "Estou muito feliz com a minha rede social!",
         media: null,
         timestamp: "15:15"

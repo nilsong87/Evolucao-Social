@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolução Social - Amigos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Evolução Social</h1>
+        <div class="logo">
+            <img src="img/logo.jpeg" alt="Logo da Rede Social">
+        </div>
+        <button id="menuToggle">☰</button>
+        <nav id="mainNav">
+            <a href="home.html">Início</a>
+            <a href="profile.html">Perfil</a>
+            <a href="groups.html">Grupos</a>
+            <a href="friends.html">Amigos</a>
+            <a href="messages.html">Mensagens</a>
+            <button id="logoutButton" class="logoutButton2">Sair</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="friends-list">
+            <h2>Amigos</h2>
+            <div class="search-bar">
+                <input type="text" id="searchFriend" placeholder="Pesquisar amigos...">
+                <button id="addFriendButton">Adicionar Amigo</button>
+            </div>
+            <div class="friends-grid">
+                <!-- Lista de amigos será carregada aqui via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Evolução Social (Nilson Gomes). Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/friends.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

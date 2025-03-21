@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolução Social - Perfil</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Evolução Social</h1>
+        <div class="logo">
+            <img src="img/logo.jpeg" alt="Logo da Rede Social">
+        </div>
+        <button id="menuToggle">☰</button>
+        <nav id="mainNav">
+            <a href="home.html">Início</a>
+            <a href="profile.html">Perfil</a>
+            <a href="groups.html">Grupos</a>
+            <a href="friends.html">Amigos</a>
+            <a href="messages.html">Mensagens</a>
+            <button id="logoutButton" class="logoutButton2">Sair</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Cabeçalho do Perfil -->
+        <section class="profile-header">
+            <div class="cover-photo">
+                <img src="https://via.placeholder.com/1200x300" alt="Capa do Perfil">
+                <button id="editCoverPhoto">Editar Capa</button>
+            </div>
+            <div class="profile-info">
+                <div class="profile-picture">
+                    <img src="img/perfil.jpg" alt="Foto de Perfil">
+                    <button id="editProfilePicture">Editar Foto</button>
+                </div>
+                <h2>Nome do Usuário</h2>
+                <p class="bio">Bio do usuário...</p>
+                <button id="editProfileButton">Editar Perfil</button>
+                <div class="stats">
+                    <span><strong>150</strong> Seguidores</span>
+                    <span><strong>200</strong> Seguindo</span>
+                </div>
+                <div class="actions">
+                    <button id="followButton">Seguir</button>
+                    <button id="messageButton">Mensagem</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aba de Navegação -->
+        <nav class="profile-nav">
+            <a href="#posts" class="active">Postagens</a>
+            <a href="#photos">Fotos</a>
+            <a href="#videos">Vídeos</a>
+            <a href="#likes">Curtidas</a>
+        </nav>
+
+        <!-- Conteúdo do Perfil -->
+        <section class="profile-content">
+            <div id="posts" class="tab-content active">
+                <!-- Postagens do usuário -->
+                <div class="post">
+                    <div class="post-header">
+                        <img src="img/perfil.jpg" alt="User">
+                        <h3>Nome do Usuário</h3>
+                    </div>
+                    <div class="post-content">
+                        <p>Esta é uma postagem de exemplo.</p>
+                        <img src="img/post01.png" alt="Post Image" class="Post-Image">
+                    </div>
+                    <div class="post-actions">
+                        <button>Curtir</button>
+                        <button>Comentar</button>
+                        <button>Compartilhar</button>
+                    </div>
+                </div>
+                <br>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="img/perfil.jpg" alt="User">
+                        <h3>Nome do Usuário</h3>
+                    </div>
+                    <div class="post-content">
+                        <p>Esta é uma postagem de exemplo.</p>
+                        <img src="img/post03.png" alt="Post Image" class="Post-Image">
+                    </div>
+                    <div class="post-actions">
+                        <button>Curtir</button>
+                        <button>Comentar</button>
+                        <button>Compartilhar</button>
+                    </div>
+                </div>
+                <br>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="img/perfil.jpg" alt="User">
+                        <h3>Nome do Usuário</h3>
+                    </div>
+                    <div class="post-content">
+                        <p>Esta é uma postagem de exemplo.</p>
+                        <img src="img/post02.png" alt="Post Image" class="Post-Image">
+                    </div>
+                    <div class="post-actions">
+                        <button>Curtir</button>
+                        <button>Comentar</button>
+                        <button>Compartilhar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="photos" class="tab-content">
+                <!-- Fotos do usuário -->
+                <div class="photo-grid">
+                    <img src="img/perfil3.jpeg" alt="Foto 3">
+                </div>
+            </div>
+
+            <div id="videos" class="tab-content">
+                <!-- Vídeos do usuário -->
+                <div class="video-grid">
+                    <video controls>
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                </div>
+            </div>
+
+            <div id="likes" class="tab-content">
+                <!-- Curtidas do usuário -->
+                <p>Conteúdo curtido pelo usuário.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Evolução Social (Nilson Gomes). Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/profile.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

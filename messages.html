@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolução Social - Mensagens</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Evolução Social</h1>
+        <div class="logo">
+            <img src="img/logo.jpeg" alt="Logo da Rede Social">
+        </div>
+        <button id="menuToggle">☰</button>
+        <nav id="mainNav">
+            <a href="home.html">Início</a>
+            <a href="profile.html">Perfil</a>
+            <a href="groups.html">Grupos</a>
+            <a href="friends.html">Amigos</a>
+            <a href="messages.html">Mensagens</a>
+            <button id="logoutButton"  class="logoutButton2">Sair</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="messages-container">
+            <div class="chat-wrapper">
+                <!-- Lista de conversas -->
+                <div class="conversation-list">
+                    <div class="conversation-header">
+                        <h2>Conversas</h2>
+                        <button id="newChatButton">Nova Conversa</button>
+                    </div>
+                    <div id="conversationItems">
+                        <!-- Conversas serão carregadas aqui -->
+                    </div>
+                </div>
+
+                <!-- Área de chat -->
+                <div class="chat-area">
+                    <div class="chat-header">
+                        <div class="chat-info">
+                            <img id="currentChatAvatar" src="img/avatars/default.jpg" alt="Avatar">
+                            <h3 id="currentChatName">Selecione uma conversa</h3>
+                            <span id="currentChatStatus"></span>
+                        </div>
+                    </div>
+                    <div class="message-list" id="messageList">
+                        <!-- Mensagens serão carregadas aqui -->
+                    </div>
+                    <div class="message-input">
+                        <textarea id="messageText" placeholder="Digite sua mensagem..."></textarea>
+                        <button id="sendMessageButton">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- O mesmo footer das outras páginas -->
+    </footer>
+    <script src="js/messages.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

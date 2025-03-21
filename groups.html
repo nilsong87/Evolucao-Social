@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolução Social - Grupos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Evolução Social</h1>
+        <div class="logo">
+            <img src="img/logo.jpeg" alt="Logo da Rede Social">
+        </div>
+        <button id="menuToggle">☰</button>
+        <nav id="mainNav">
+            <a href="home.html">Início</a>
+            <a href="profile.html">Perfil</a>
+            <a href="groups.html">Grupos</a>
+            <a href="friends.html">Amigos</a>
+            <a href="messages.html">Mensagens</a>
+            <button id="logoutButton" class="logoutButton2">Sair</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção de criação de grupos -->
+        <section class="create-group">
+            <h2>Criar Novo Grupo</h2>
+            <input type="text" id="groupName" placeholder="Nome do Grupo">
+            <textarea id="groupDescription" placeholder="Descrição do Grupo"></textarea>
+            <input type="file" id="groupCover" accept="image/*">
+            <select id="groupPrivacy">
+                <option value="public">Público</option>
+                <option value="private">Privado</option>
+                <option value="secret">Secreto</option>
+            </select>
+            <button id="createGroupButton">Criar Grupo</button>
+        </section>
+
+        <!-- Seção de listagem de grupos -->
+        <section class="group-list">
+            <h2>Grupos Existentes</h2>
+            <!-- Lista de grupos será carregada aqui via JavaScript -->
+        </section>
+    </main>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/groups.js"></script>
+</body>
+
+</html>

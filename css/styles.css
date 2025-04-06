@@ -94,10 +94,10 @@ main {
     padding-bottom: 60px; /* Espaço para o footer */
     height: calc(100vh - 140px); /* Altura total menos header e footer */
     overflow-y: scroll; /* Habilita a rolagem vertical */
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
     /* Esconde a barra de rolagem */
     scrollbar-width: none; /* Para Firefox */
     -ms-overflow-style: none; /* Para Internet Explorer e Edge */
